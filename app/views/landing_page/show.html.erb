@@ -136,7 +136,7 @@
         <div class="col-sm-8">
           <h2>Technical<strong> Skills</strong></h2>
             <p class="mrgBtm20">
-              It takes knowledge, smart work, and dedication to make great ideas come to life. I have been helping make great ideas happen for the past 4 months and am always ready for new challenges.
+              It takes knowledge, smart work, and dedication to make great ideas come to life. I have been helping make great ideas happen for the past <%= @total_calculated_exp > 12 ? pluralize((@round_exp),'year') : pluralize((@total_experiance).to_i,'month') %> and am always ready for new challenges.
             </p>
           <div class="row">
             <div class="col-md-2 skilltitle">Ruby-2.2.2</div>
@@ -284,7 +284,7 @@
           <div class="timeline-panel debits">
             <ul class="timeline-panel-ul">
               <li><span class="importo">Solute Technolabs LLP</span></li>
-              <li><span class="causale">Solute TechnoLabs LLP is a premier Web and Mobile solution provider based out of Ahmedabad, India. We are a group of efficient and skilled people who deliver products with three things in mind. </span> </li>
+              <li><span class="causale">Solute TechnoLabs LLP is a premier Mobile and Web solution provider. Bringing together experience of some of the best skilled people in the industry, we strive to deliver the best and nothing but the best. </span> </li>
               <li><p><small class="text-muted"> 07/04/2015 - Present</small></p> </li>
             </ul>
           </div>
