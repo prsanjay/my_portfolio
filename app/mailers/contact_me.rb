@@ -5,5 +5,4 @@ class ContactMe < ApplicationMailer
     mail(from: @user.email)
     mail(to: 'lnvg530@gmail.com', subject: 'Mail from portfolio')
   end
-
 end

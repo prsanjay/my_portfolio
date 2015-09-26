@@ -15,3 +15,8 @@
 //= require turbolinks
 //= require toastr
 //= require_tree .
+
+$('#da-slider').cslider({
+    autoplay: true,
+    bgincrement: 0
+});
