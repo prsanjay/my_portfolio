@@ -6,7 +6,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        ContactMe.mail_from_user(@user).deliver_now
+        @name = @user.name
+        @email = @user.email
+        @comment = @user.comment
+        Resque.enqueue(Job, @name, @email, @comment)
+        #ContactMe.mail_from_user(@user).deliver_now
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.js
         format.json { render :show, status: :created, location: @user }

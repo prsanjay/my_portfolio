@@ -1,3 +1,4 @@
+require 'resque/server'
 Rails.application.routes.draw do
   #resources :users
   #get 'landing_page/show'
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'landing_page#show'
   post 'message' => 'users#create'
+
+  mount Resque::Server.new, at: "/resque"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
