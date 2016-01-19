@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        ContactMe.delay.mail_from_user(@user)
+        # ContactMe.delay.mail_from_user(@user) # Using delayed_job but worker can't work on heroku need to purchase
+        ContactMe.mail_from_user(@user).deliver_now!
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.js
         format.json { render :show, status: :created, location: @user }
