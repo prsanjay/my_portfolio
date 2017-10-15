@@ -32,6 +32,11 @@ gem "daemons"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem "blogit"
+# Blogit depends on ActsAsTaggableOn
+gem "acts-as-taggable-on"
+gem 'monologue'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do
