@@ -32,7 +32,7 @@ gem "daemons"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-gem "blogit"
+#gem "blogit"
 # Blogit depends on ActsAsTaggableOn
 gem "acts-as-taggable-on"
 gem 'monologue'
