@@ -1,3 +1,7 @@
-// Place all the styles related to the landing_page controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.timeline-panel-ul.ul-style{
+  list-style-position: inside !important;
+}
+.li-style{
+  list-style-type: disc;
+}
